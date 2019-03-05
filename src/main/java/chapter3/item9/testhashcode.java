@@ -72,7 +72,6 @@ public class testhashcode {
         }
 
         /**
-         * 根据hashcode的文档要遵守
          * byte、char、short计算为（int）val
          * 根据result = 31 * result + c 合并到result中。
          * @return
@@ -92,22 +91,27 @@ public class testhashcode {
     }
 
     public static void main(String[] args) {
-
+        /*没有重写任何函数*/
         DonotOverrideEquals dA=new testhashcode().new DonotOverrideEquals("test1",1);
         DonotOverrideEquals dB=new testhashcode().new DonotOverrideEquals("test1",1);
         DonotOverrideEquals dC=new testhashcode().new DonotOverrideEquals("test2",2);
+        /*重写了equals函数*/
         OverrideEquals oA=new testhashcode().new OverrideEquals("test1",1);
         OverrideEquals oB=new testhashcode().new OverrideEquals("test1",1);
         OverrideEquals oC=new testhashcode().new OverrideEquals("test2",2);
+        /*重写equals和hashcode函数*/
         OverrideEqualsAndHashcode oehA=new testhashcode().new OverrideEqualsAndHashcode("test1",1);
         OverrideEqualsAndHashcode oehB=new testhashcode().new OverrideEqualsAndHashcode("test1",1);
         OverrideEqualsAndHashcode oehC=new testhashcode().new OverrideEqualsAndHashcode("test2",2);
+
         System.out.println("do not override equals:");
         System.out.println("equals:"+dA.equals(dB)+"\t"+"dA hashcode:"+dA.hashCode()+"\t"+"dB hashcode:"+dB.hashCode());
         System.out.println("equals:"+dA.equals(dC)+"\t"+"dA hashcode:"+dA.hashCode()+"\t"+"dC hashcode:"+dC.hashCode());
+
         System.out.println("\n"+"override equals:");
         System.out.println("equals:"+oA.equals(oB)+"\t"+"oA hashcode:"+oA.hashCode()+"\t"+"oB hashcode:"+oB.hashCode());
         System.out.println("equals:"+oA.equals(oC)+"\t"+"oA hashcode:"+oA.hashCode()+"\t"+"oC hashcode:"+oC.hashCode());
+
         System.out.println("\n"+"override equals and hashcode:");
         System.out.println("equals:"+oehA.equals(oehB)+"\t"+"oehA hashcode:"+oehA.hashCode()+"\t"+"oehB hashcode:"+oehB.hashCode());
         System.out.println("equals:"+oehA.equals(oehC)+"\t"+"oehA hashcode:"+oehA.hashCode()+"\t"+"oehC hashcode:"+oehC.hashCode());
