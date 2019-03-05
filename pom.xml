@@ -8,17 +8,7 @@
     <artifactId>effectjava</artifactId>
     <version>1.0</version>
     <dependencies>
-<!--        &lt;!&ndash;七牛云&ndash;&gt;
-        <dependency>
-            <groupId>com.qiniu</groupId>
-            <artifactId>qiniu-java-sdk</artifactId>
-            <version>[7.2.0, 7.2.99]</version>
-        </dependency>
-        <dependency>
-            <groupId>com.rabbitmq</groupId>
-            <artifactId>amqp-client</artifactId>
-            <version>3.6.6</version>
-        </dependency>-->
+
     </dependencies>
 
 </project>
