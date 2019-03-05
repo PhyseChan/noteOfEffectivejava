@@ -1,4 +1,4 @@
-package chapter3.item9;
+package chapter3.item8;
 
 /**
  * 测试equals函数
